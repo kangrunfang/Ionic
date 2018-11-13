@@ -1,17 +1,158 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+<ion-header text-center no-border>
+  <ion-navbar color="yel">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      桔家
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ul>
+    <li>推荐</li>
+    <li>家居</li>
+    <li>餐厨</li>
+    <li>床上用品</li>
+  </ul>
+
+  <ion-slides (ionSlideDidChange)="change()" pager="true" autoplay="1000" loop="true" class="sli">
+      <ion-slide>
+        <img src="assets/imgs/lunbo1.png"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/timg.jpg"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/ti.jpg"/>
+      </ion-slide>
+    </ion-slides>
+    <ion-slides id="box">
+        <ion-slide>
+            <!--<img src="assets/imgs/room1.jpg"/>
+            <img src="assets/imgs/book.jpg"/>
+            <img src="assets/imgs/door.jpg"/>-->
+            <ion-slide>
+                <ion-slides class="pi">
+                  <ion-slide>
+                  <img src="assets/imgs/room1.jpg"/>
+                  <p>客厅</p>
+                  </ion-slide>
+                </ion-slides>
+                <ion-slides class="pi">
+                    <ion-slide>
+                    <img src="assets/imgs/book.jpg"/>
+                    <p>书房</p>
+                    </ion-slide>
+                  </ion-slides>
+                  <ion-slides class="pi">
+                      <ion-slide>
+                      <img src="assets/imgs/door.jpg"/>
+                      <p>门厅</p>
+                      </ion-slide>
+                    </ion-slides>
+              </ion-slide>
+        </ion-slide>
+    </ion-slides>
+    
+    <ion-slides id="text">
+      <ion-slide>
+        <img src="assets/imgs/text.jpg"/>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-slides id="intro">
+        <ion-slide>
+          <ion-slides class="pic">
+            <ion-slide>
+            <img src="assets/imgs/table.jpg"/>
+            <p>欧式全实木花几&nbsp;&nbsp;RMB600</p>
+            </ion-slide>
+          </ion-slides>
+          <ion-slides class="pic">
+              <ion-slide>
+              <img src="assets/imgs/table2.jpg"/>
+              <p>现代简约早餐桌&nbsp;&nbsp;RMB450</p>
+              </ion-slide>
+            </ion-slides>
+        </ion-slide>
+    </ion-slides>
+    <ion-slides id="intro">
+        <ion-slide>
+          <ion-slides class="pic">
+            <ion-slide>
+            <img src="assets/imgs/room2.jpg"/>
+            <p>简洁卧室实木床&nbsp;&nbsp;RMB1050</p>
+            </ion-slide>
+          </ion-slides>
+          <ion-slides class="pic">
+              <ion-slide>
+              <img src="assets/imgs/chair.jpg"/>
+              <p>室内简约风沙发套装&nbsp;&nbsp;RMB1000</p>
+              </ion-slide>
+            </ion-slides>
+        </ion-slide>
+    </ion-slides>
+
+  <!--
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+-->
+<!--
+  <ion-scroll scrollX="true">
+    <span>好友</span>
+    <span>群聊</span>
+    <span>通讯录</span>
+    <span>公众号</span>
+  </ion-scroll>
+
+  css工具集--theme下
+  sass变量(全局) -- variable.scss
+  slides组件、属性、方法及事件
+  @ViewChild()
+  创建组件 ionic g component componentName
+  模板引用变量 标签上写 #变量名
+  segment组件及ngSwitch
+  服务器代理 ionic.config.json
+-->
+<!--
+  <ion-segment [(ngModel)]="icons" color="secondary">
+    <ion-segment-button value="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+      <ion-icon name="bookmark"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="icons">
+    <div *ngSwitchCase="'camera'">
+      这是camera
+    </div>
+    <div *ngSwitchCase="'bookmark'">
+      这是bookMark
+    </div>
+  </div>
+-->
+<!--
+  <c #ac></c>
+  <input type="text" #inp>
+  <button  ion-button menuToggle>开关菜单</button>
+  <button ion-button block (click)="goSub()">跳转</button>
+  <ion-list>
+    <ion-item *ngFor="let item of items">{{item}}</ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  -->
 </ion-content>

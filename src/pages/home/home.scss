@@ -1,3 +1,89 @@
 page-home {
+    
+    ul li{
+        list-style: none;
+        display:inline-block;
+        margin-left:220px;
+        font-size:20px;
+        
+    }
+    .sli{
+        height:350px;
+        img{
+            height:350px;
+            width:1500px;
+        }
+    }
+    .pi{
+        height:350px;
+        width:400px;
+        display:inline-block;
+        margin:0 auto;
+        img{
+            height:350px;
+            width:400px;
+        }
+        p{
+            position: relative;
+            top:-110px;
+            font-size:25px;
+            color:white; 
+        }
+    }
 
+    .sli{
+        height:350px;
+    }
+    #box{
+        height:200px;
+        img{
+            height:200px;
+            width:400px;
+            display:inline-block;
+            margin-left:20px;
+        }
+    }
+   #text{
+        height:100px;
+        width:1500px;
+        img{
+            height:100px;
+            width:400px;
+        }
+    }
+    #intro{
+        height:400px;
+        width:1500px;
+    }
+    .pic{
+        height:400px;
+        width:600px;
+        display:inline-block;
+        margin:0 auto;
+        padding-right:70px;
+        padding-left:70px;
+        img{
+            height:400px;
+            width:600px;
+        }
+        p{
+            height:50px;
+            line-height:50px;
+            position: relative;
+            top:-50px;
+            background-color:rgb(58, 57, 57);
+            color:white; 
+        }
+    }
+    ion-sroll{
+        height:200px;
+        white-space: nowrap;
+        margin-bottom: 50px;
+        span{
+            //float:left;
+            display:inline-block;
+            width:100px;
+            text-align:center;
+        }
+    }
 }

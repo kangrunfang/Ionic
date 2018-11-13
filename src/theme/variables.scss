@@ -38,7 +38,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  yel:#ffdb2c,
+  trans:transparent
 );
 
 
@@ -48,12 +50,11 @@ $colors: (
 
 
 
-
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$item-md-detail-push-show:true;
 
 
 // App Windows Variables
@@ -86,3 +87,12 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {
+  font-family: 'iconfont';  /* project id 884911 */
+  src: url('//at.alicdn.com/t/font_884911_re01hygzwek.eot');
+  src: url('//at.alicdn.com/t/font_884911_re01hygzwek.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_884911_re01hygzwek.woff') format('woff'),
+  url('//at.alicdn.com/t/font_884911_re01hygzwek.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_884911_re01hygzwek.svg#iconfont') format('svg');
+}
